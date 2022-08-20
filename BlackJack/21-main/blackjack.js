@@ -86,7 +86,7 @@ function hit() { //функция hit = выдать еще одну карту 
     document.getElementById("your-cards").append(cardImg);
     if (reduceAce(yourSum, yourAceCount) >= 21) { //A, J, 8 -> 1 + 10 + 8 // игрок не может нажать кнопку hit
         canHit = false;//если сумма его карт >21
-        var message = "Вы не можете больше брать карту"
+        var message = "Перебор"
         document.getElementById("message").innerText = message
     }
 
@@ -105,7 +105,7 @@ function stay() { //Функция stay = она же хватит, она же 
 
     var message = "";
     if (yourSum > 21) {
-        message = "ПЕРЕБОР";//Если сумма карт превышает 21 вы проиграли
+        message = "Не фартануло";//Если сумма карт превышает 21 вы проиграли
     }
     else if (dealerSum > 21) { //Или сумма карт диллера >21, то вы победили
         message = "Вы выиграли!";
